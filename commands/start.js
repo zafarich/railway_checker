@@ -18,7 +18,7 @@ bot.command("start", async (ctx) => {
         data: {
           direction: [
             {
-              depDate: "28.04.2024",
+              depDate: "11.05.2024",
               fullday: true,
               type: "Forward",
             },
