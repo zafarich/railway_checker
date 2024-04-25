@@ -18,13 +18,13 @@ bot.command("start", async (ctx) => {
         data: {
           direction: [
             {
-              depDate: "19.04.2024",
+              depDate: "28.04.2024",
               fullday: true,
               type: "Forward",
             },
           ],
-          stationFrom: "2900000",
-          stationTo: "2900103",
+          stationFrom: "2900680",
+          stationTo: "2900000",
           detailNumPlaces: 1,
           showWithoutPlaces: 0,
         },
@@ -39,16 +39,28 @@ bot.command("start", async (ctx) => {
       });
 
       const trains = result?.data?.express?.direction?.[0]?.trains?.[0]?.train;
-      trains.forEach((train) => {
-        const cars = train?.places?.cars || [];
 
-        const cars_pk = cars.filter((item) => item.typeShow === "Kupe");
-        const cars_length = cars_pk?.length;
+      // trains.forEach((train) => {
+      //   const cars = train?.places?.cars || [];
+
+      //   // const cars_pk = cars.filter((item) => item.typeShow === "Kupe");
+      //   const cars_length = cars?.length;
+
+      //   if (cars_length && train?.number === "059Ф") {
+      //     ctx.reply("Bilet chiqdiiiiiiiiiii !!!!!");
+      //   }
+      // });
+
+      const specific_durbek_aka = trains.find((item) => item.number === "059Ф");
+
+      if (specific_durbek_aka) {
+        const cars = specific_durbek_aka?.places?.cars;
+        const cars_length = cars?.length;
 
         if (cars_length) {
           ctx.reply("Bilet chiqdiiiiiiiiiii !!!!!");
         }
-      });
+      }
     } catch (error) {}
   }, 10000);
 });
