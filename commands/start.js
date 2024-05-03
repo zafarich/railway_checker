@@ -24,7 +24,7 @@ bot.command("start", async (ctx) => {
               type: "Forward",
             },
           ],
-          stationFrom: "2900103",
+          stationFrom: "2900790",
           stationTo: "2900000",
           detailNumPlaces: 1,
           showWithoutPlaces: 0,
@@ -48,7 +48,7 @@ bot.command("start", async (ctx) => {
         const cars_length = cars?.length;
 
         if (cars_length) {
-          ctx.reply("Bilet To'rtkol chiqdiiiiiiiiiii !!!!!");
+          ctx.reply("Bilet Urganch chiqdiiiiiiiiiii !!!!!");
         }
       });
     } catch (error) {}
