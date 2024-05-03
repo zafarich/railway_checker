@@ -24,7 +24,7 @@ bot.command("start", async (ctx) => {
             },
           ],
           stationFrom: "2900000",
-          stationTo: "2900790",
+          stationTo: "2900103",
           detailNumPlaces: 1,
           showWithoutPlaces: 0,
         },
