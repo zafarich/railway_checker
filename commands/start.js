@@ -47,7 +47,7 @@ bot.command("start", async (ctx) => {
         const cars_length = cars?.length;
 
         if (cars_length) {
-          ctx.reply("Bilet chiqdiiiiiiiiiii !!!!!");
+          ctx.reply("Bilet Urganch chiqdiiiiiiiiiii !!!!!");
         }
       });
     } catch (error) {}
