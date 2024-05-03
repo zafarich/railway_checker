@@ -16,6 +16,7 @@ bot.command("start", async (ctx) => {
         method: "POST",
         url: "https://eticket.railway.uz/api/v3/trains/availability/space/between/stations",
         data: {
+          //d
           direction: [
             {
               depDate: "04.05.2024",
