@@ -16,15 +16,14 @@ bot.command("start", async (ctx) => {
         method: "POST",
         url: "https://eticket.railway.uz/api/v3/trains/availability/space/between/stations",
         data: {
-          //d
           direction: [
             {
-              depDate: "04.05.2024",
+              depDate: "05.05.2024",
               fullday: true,
               type: "Forward",
             },
           ],
-          stationFrom: "2900790",
+          stationFrom: "2900680",
           stationTo: "2900000",
           detailNumPlaces: 1,
           showWithoutPlaces: 0,
@@ -41,16 +40,27 @@ bot.command("start", async (ctx) => {
 
       const trains = result?.data?.express?.direction?.[0]?.trains?.[0]?.train;
 
-      trains.forEach((train) => {
-        const cars = train?.places?.cars || [];
+      // trains.forEach((train) => {
+      //   const cars = train?.places?.cars || [];
 
-        // const cars_pk = cars.filter((item) => item.typeShow === "Kupe");
+      //   // const cars_pk = cars.filter((item) => item.typeShow === "Kupe");
+      //   const cars_length = cars?.length;
+
+      //   if (cars_length && train?.number === "059Ф") {
+      //     ctx.reply("Bilet chiqdiiiiiiiiiii !!!!!");
+      //   }
+      // });
+
+      const specific_durbek_aka = trains.find((item) => item.number === "059Ф");
+
+      if (specific_durbek_aka) {
+        const cars = specific_durbek_aka?.places?.cars;
         const cars_length = cars?.length;
 
         if (cars_length) {
-          ctx.reply("Bilet Urganch chiqdiiiiiiiiiii !!!!!");
+          ctx.reply("Bilet chiqdiiiiiiiiiii !!!!!");
         }
-      });
+      }
     } catch (error) {}
   }, 10000);
 });
