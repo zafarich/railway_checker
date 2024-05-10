@@ -46,7 +46,7 @@ bot.command("start", async (ctx) => {
         // const cars_pk = cars.filter((item) => item.typeShow === "Kupe");
         const cars_length = cars?.length;
 
-        if (cars_length && train?.number === "059Ф") {
+        if (cars_length) {
           ctx.reply("Bilet chiqdiiiiiiiiiii !!!!!");
         }
       });
