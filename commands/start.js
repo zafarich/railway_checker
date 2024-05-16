@@ -18,13 +18,13 @@ bot.command("start", async (ctx) => {
         data: {
           direction: [
             {
-              depDate: "16.05.2024",
+              depDate: "17.05.2024",
               fullday: true,
               type: "Forward",
             },
           ],
           stationFrom: "2900000",
-          stationTo: "2900790",
+          stationTo: "2900103",
           detailNumPlaces: 1,
           showWithoutPlaces: 0,
         },
