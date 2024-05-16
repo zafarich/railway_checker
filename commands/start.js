@@ -43,8 +43,8 @@ bot.command("start", async (ctx) => {
       trains.forEach((train) => {
         const cars = train?.places?.cars || [];
 
-        // const cars_pk = cars.filter((item) => item.typeShow === "Kupe");
-        const cars_length = cars?.length;
+        const cars_pk = cars.filter((item) => item.typeShow === "Plaskartli");
+        const cars_length = cars_pk?.length;
 
         if (cars_length) {
           ctx.reply("Bilet chiqdiiiiiiiiiii !!!!!");
