@@ -57,7 +57,7 @@ bot.command("start", async (ctx) => {
 
         if (cars_length) {
           const seat_item = cars?.[0]?.tariffs?.tariff?.find(
-            (i) => i?.classService?.type === "1В"
+            (i) => i?.classService?.type === "2В"
           );
 
           if (seat_item) {
