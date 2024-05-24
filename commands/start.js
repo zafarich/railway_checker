@@ -3,8 +3,6 @@ const {bot} = require("../services/bot.js");
 
 const axios = require("axios");
 
-const bot_name = process.env.BOT_NAME;
-
 bot.command("start", async (ctx) => {
   const chat_id = ctx.message.chat.id;
 
