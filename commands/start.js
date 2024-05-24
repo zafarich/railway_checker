@@ -56,7 +56,13 @@ bot.command("start", async (ctx) => {
         const cars_length = cars?.length;
 
         if (cars_length) {
-          ctx.reply("Bilet chiqdiiiiiiiiiii !!!!!");
+          const seat_item = cars?.[0]?.tariffs?.tariff?.find(
+            (i) => i?.classService?.type === "1В"
+          );
+
+          if (seat_item) {
+            ctx.reply("Bilet chiqdiiiiiiiiiii !!!!!");
+          }
         }
       }
     } catch (error) {}
