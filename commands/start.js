@@ -38,27 +38,27 @@ bot.command("start", async (ctx) => {
 
       const trains = result?.data?.express?.direction?.[0]?.trains?.[0]?.train;
 
-      // trains.forEach((train) => {
-      //   const cars = train?.places?.cars || [];
+      trains.forEach((train) => {
+        const cars = train?.places?.cars || [];
 
-      //   const cars_pk = cars.filter((item) => item.typeShow == "Plaskartli");
-      //   const cars_length = cars_pk?.length;
-
-      //   if (cars_length) {
-      //     ctx.reply("Bilet chiqdiiiiiiiiiii !!!!!");
-      //   }
-      // });
-
-      const specific_durbek_aka = trains.find((item) => item.number === "059Ф");
-
-      if (specific_durbek_aka) {
-        const cars = specific_durbek_aka?.places?.cars;
-        const cars_length = cars?.length;
+        const cars_pk = cars;
+        const cars_length = cars_pk?.length;
 
         if (cars_length) {
           ctx.reply("Bilet chiqdiiiiiiiiiii !!!!!");
         }
-      }
+      });
+
+      // const specific_durbek_aka = trains.find((item) => item.number === "059Ф");
+
+      // if (specific_durbek_aka) {
+      //   const cars = specific_durbek_aka?.places?.cars;
+      //   const cars_length = cars?.length;
+
+      //   if (cars_length) {
+      //     ctx.reply("Bilet chiqdiiiiiiiiiii !!!!!");
+      //   }
+      // }
     } catch (error) {}
   }, 10000);
 });
