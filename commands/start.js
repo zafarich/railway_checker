@@ -49,7 +49,7 @@ bot.command("start", async (ctx) => {
       //   }
       // });
 
-      const specific_durbek_aka = trains.find((item) => item.number === "059Ф");
+      const specific_durbek_aka = trains.find((item) => item.number == "059Ф");
 
       if (specific_durbek_aka) {
         const cars = specific_durbek_aka?.places?.cars;
