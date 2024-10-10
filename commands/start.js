@@ -57,7 +57,7 @@ bot.command("start", async (ctx) => {
 
       const events = result.data?.response?.events;
 
-      if (events?.[0]?.slug !== "uzbekistan-vs-ir-iran20242") {
+      if (events?.[0]?.slug !== "uzbekistan-vs-ir-iran2024") {
         ctx.reply("Bilet chiqdiiiiiiiiiii !!!!!");
       }
     } catch (error) {}
