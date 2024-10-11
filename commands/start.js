@@ -57,10 +57,7 @@ bot.command("start", async (ctx) => {
 
       const events = result.data?.response?.events;
 
-      if (
-        events?.[0]?.slug !== "uzbekistan-vs-ir-iran2024" &&
-        events?.length > 0
-      ) {
+      if (events?.length > 0) {
         ctx.reply("Bilet chiqdiiiiiiiiiii !!!!!");
       }
     } catch (error) {}
