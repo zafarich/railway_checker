@@ -43,9 +43,11 @@ bot.command("start", async (ctx) => {
       });
 
       const trains = result?.data?.express?.direction?.[0]?.trains?.[0]?.train;
+      const filteredTrains =
+        trains?.filter((train) => train.number === "054Ф") || [];
       let hasAvailableTickets = false;
 
-      trains.forEach((train) => {
+      filteredTrains.forEach((train) => {
         const cars = train?.places?.cars || [];
 
         const cars_pk = cars.filter(
