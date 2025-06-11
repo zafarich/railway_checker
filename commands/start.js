@@ -28,15 +28,15 @@ bot.command("start", async (ctx) => {
             },
           ],
           stationFrom: "2900103",
-          stationTo: "2900790",
+          stationTo: "2900000",
           detailNumPlaces: 1,
           showWithoutPlaces: 0,
         },
 
         headers: {
-          "X-Xsrf-Token": "64f763e3-c5eb-44e0-a3fe-a75883aad2cc",
+          "X-Xsrf-Token": "c64a2c69-1fb7-4828-b09e-555bf006952b",
           Cookie:
-            "_ga=GA1.1.1452817594.1733381651; __stripe_mid=450fa355-8e90-46de-b0d1-da3e109c1b8fbf5719; G_ENABLED_IDPS=google; __stripe_sid=22bc924f-9dcb-414e-ab30-d88428a96268fc071a; XSRF-TOKEN=64f763e3-c5eb-44e0-a3fe-a75883aad2cc; _ga_K4H2SZ7MWK=GS1.1.1735271997.23.1.1735272499.0.0.0",
+            "__stripe_mid=4f8ee9bb-6d60-4b01-87af-4e4186fd098f5022b0; _ga=GA1.1.975987013.1743228735; G_ENABLED_IDPS=google; XSRF-TOKEN=c64a2c69-1fb7-4828-b09e-555bf006952b; _ga_K4H2SZ7MWK=GS2.1.s1749627334$o10$g0$t1749627334$j60$l0$h0; __stripe_sid=020bf773-cbed-4177-b02c-76ac0abbbaf4688e9a",
           "Device-Type": "BROWSER",
           "Accept-Language": "uz",
         },
