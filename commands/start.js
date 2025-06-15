@@ -22,13 +22,13 @@ bot.command("start", async (ctx) => {
         data: {
           direction: [
             {
-              depDate: "16.06.2025",
+              depDate: "15.06.2025",
               fullday: true,
               type: "Forward",
             },
           ],
-          stationFrom: "2900000",
-          stationTo: "2900885",
+          stationFrom: "2900103",
+          stationTo: "2900000",
           detailNumPlaces: 1,
           showWithoutPlaces: 0,
         },
@@ -44,7 +44,7 @@ bot.command("start", async (ctx) => {
 
       const trains = result?.data?.express?.direction?.[0]?.trains?.[0]?.train;
       const filteredTrains =
-        trains?.filter((train) => train.number === "054Ф") || [];
+        trains?.filter((train) => train.number === "054Щ") || [];
       let hasAvailableTickets = false;
 
       filteredTrains.forEach((train) => {
